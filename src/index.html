@@ -58,7 +58,7 @@
         window.webtor = window.webtor || [];
         window.webtor.push({
             id: 'player',
-            magnet: '{{m.torrent.name}}',
+            magnet: 'add()',
             on: function(e) {
                 if (e.name == window.webtor.TORRENT_FETCHED) {
                     console.log('Torrent fetched!')
