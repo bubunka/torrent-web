@@ -42,9 +42,10 @@
                     </md-button>
                     <a flex class="filename" ng-href="torrent/{{file.name}}" download="{{file.name}}">{{file.name}}</a>
                     <span>{{size(file.length, 1)}}</span>    
-                </div>
-              
-              <div id="player" class="webtor" />
+                </div>             
+            </md-content>
+  
+                        <div id="player" class="webtor" />
     <script>
         window.webtor = window.webtor || [];
         window.webtor.push({
@@ -69,10 +70,7 @@
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@webtor/player-sdk-js/dist/index.min.js" charset="utf-8"></script>
-
-              
-            </md-content>
-  
+          
         </div>
 
         <md-button class="md-icon-button back-button" aria-label="Cancel" ng-click="back();" ng-if="m.torrent || m.submitting">
