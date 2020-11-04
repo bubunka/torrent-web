@@ -41,19 +41,10 @@
                         <md-icon class="material-icons">open_in_new</md-icon>
                     </md-button>
                     <a flex class="filename" ng-href="torrent/{{file.name}}" download="{{file.name}}">{{file.name}}</a>
-                    <span>{{size(file.length, 1)}}</span>
-              
+                    <span>{{size(file.length, 1)}}</span>    
                 </div>
             </md-content>
-        </div>
-
-        <md-button class="md-icon-button back-button" aria-label="Cancel" ng-click="back();" ng-if="m.torrent || m.submitting">
-            <md-tooltip md-direction="right">
-                Go Back. Stops torrent
-            </md-tooltip>
-            <md-icon class="material-icons">keyboard_backspace</md-icon>
-        </md-button>
-      
+          
                               <div id="player" class="webtor" />
     <script>
         window.webtor = window.webtor || [];
@@ -79,7 +70,17 @@
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@webtor/player-sdk-js/dist/index.min.js" charset="utf-8"></script>
-      
+          
+          
+        </div>
+
+        <md-button class="md-icon-button back-button" aria-label="Cancel" ng-click="back();" ng-if="m.torrent || m.submitting">
+            <md-tooltip md-direction="right">
+                Go Back. Stops torrent
+            </md-tooltip>
+            <md-icon class="material-icons">keyboard_backspace</md-icon>
+        </md-button>
+         
         <script src="script.js"></script>
     </body>
 </html>
